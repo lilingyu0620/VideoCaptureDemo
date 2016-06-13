@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVH-Wx-bhv">
+                                <rect key="frame" x="0.0" y="44" width="375" height="430"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="430" id="iHh-41-YLm"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEV-wY-GIT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IsM-7H-uJV">
+                                        <rect key="frame" x="322" y="3" width="48" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="48" id="89G-nn-kkx"/>
+                                            <constraint firstAttribute="height" constant="37" id="m8X-sV-d1o"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" image="btn_video_flip_camera"/>
+                                        <connections>
+                                            <action selector="SwitchCameraBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Qr-rO-bPP"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGx-qJ-qwP">
+                                        <rect key="frame" x="0.0" y="11" width="100" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="gFi-6E-TYl"/>
+                                            <constraint firstAttribute="height" constant="21" id="vfW-UA-Pyq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="IsM-7H-uJV" secondAttribute="trailing" constant="5" id="Ll2-E7-1kB"/>
+                                    <constraint firstItem="iGx-qJ-qwP" firstAttribute="centerY" secondItem="IEV-wY-GIT" secondAttribute="centerY" id="ODa-ML-FWh"/>
+                                    <constraint firstAttribute="height" constant="44" id="UEh-mW-CeD"/>
+                                    <constraint firstItem="IsM-7H-uJV" firstAttribute="centerY" secondItem="IEV-wY-GIT" secondAttribute="centerY" id="VuW-al-fpa"/>
+                                    <constraint firstItem="IsM-7H-uJV" firstAttribute="top" secondItem="IEV-wY-GIT" secondAttribute="top" constant="5" id="re3-Cr-wWT"/>
+                                    <constraint firstItem="iGx-qJ-qwP" firstAttribute="leading" secondItem="IEV-wY-GIT" secondAttribute="leading" id="yJA-HR-TaQ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="re3-Cr-wWT"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbP-Z7-xSJ">
+                                <rect key="frame" x="25" y="482" width="79" height="35"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="3Ah-hq-3lk"/>
+                                    <constraint firstAttribute="width" constant="79" id="NCk-vA-QdA"/>
+                                </constraints>
+                                <state key="normal" title="开始录像"/>
+                                <connections>
+                                    <action selector="startVideoBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hhn-8K-WpQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMi-Yg-rL0">
+                                <rect key="frame" x="271" y="482" width="79" height="35"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="9Oq-zl-CLG"/>
+                                    <constraint firstAttribute="height" constant="35" id="amW-x1-ZsT"/>
+                                </constraints>
+                                <state key="normal" title="结束录像"/>
+                                <connections>
+                                    <action selector="finishVideoBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lpX-84-yA4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOb-Ke-BIw">
+                                <rect key="frame" x="154" y="485" width="67" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LDK-dP-mzS"/>
+                                    <constraint firstAttribute="width" constant="67" id="cen-Dg-ZJj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="选择视频"/>
+                                <connections>
+                                    <action selector="selectedVideoBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lSz-Yt-VpD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EMi-Yg-rL0" firstAttribute="top" secondItem="CVH-Wx-bhv" secondAttribute="bottom" constant="8" id="3GG-rF-But"/>
+                            <constraint firstItem="CVH-Wx-bhv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="4g7-dA-XRd"/>
+                            <constraint firstItem="OOb-Ke-BIw" firstAttribute="top" secondItem="CVH-Wx-bhv" secondAttribute="bottom" constant="11" id="4if-F8-1Lb"/>
+                            <constraint firstItem="XbP-Z7-xSJ" firstAttribute="top" secondItem="CVH-Wx-bhv" secondAttribute="bottom" constant="8" id="AjM-Zz-H8L"/>
+                            <constraint firstAttribute="trailing" secondItem="EMi-Yg-rL0" secondAttribute="trailing" constant="25" id="Fb0-dY-3PV"/>
+                            <constraint firstAttribute="trailing" secondItem="IEV-wY-GIT" secondAttribute="trailing" id="FtV-JN-Mr2"/>
+                            <constraint firstItem="IEV-wY-GIT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="K2U-nl-24O"/>
+                            <constraint firstAttribute="trailing" secondItem="CVH-Wx-bhv" secondAttribute="trailing" id="RIi-FB-yV4"/>
+                            <constraint firstItem="XbP-Z7-xSJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="VzT-ci-AfL"/>
+                            <constraint firstItem="OOb-Ke-BIw" firstAttribute="centerX" secondItem="CVH-Wx-bhv" secondAttribute="centerX" id="b5u-2N-l2A"/>
+                            <constraint firstItem="IEV-wY-GIT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cm8-sX-S7X"/>
+                            <constraint firstItem="CVH-Wx-bhv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fm6-u6-Cp4"/>
+                            <constraint firstItem="CVH-Wx-bhv" firstAttribute="top" secondItem="IEV-wY-GIT" secondAttribute="bottom" id="g72-kH-3ba"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4g7-dA-XRd"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="timeLabel" destination="iGx-qJ-qwP" id="3V7-Hz-frh"/>
+                        <outlet property="videoView" destination="CVH-Wx-bhv" id="mNn-Y0-ba5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="259.5" y="389.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_video_flip_camera" width="37" height="37"/>
+    </resources>
+</document>
